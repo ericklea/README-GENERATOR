@@ -4,7 +4,7 @@
 const questions = [];
 
 // TODO: Create a function to write README file
-const fs = require('fs');
+
 
 function writeReadme(Title, Description, TableOfContents, Installation, Usage, License) {
 
@@ -15,6 +15,7 @@ function writeToFile(fileName, data) { }
 function init() {
     //run inquirer prompt
     const inquirer = require('inquirer');
+    const fs = require('fs');
     //inquirer prompt
     inquirer.prompt([
         {
@@ -43,7 +44,11 @@ function init() {
             message: 'List collaborators, tutorials followed, and materials used:',           
         },
         {
-            type:
+            type: 'list',
+            name: 'License',
+            message: 'Indicate the licenses you used:',
+            choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+        }
 
     ])
         .then(answers => {
