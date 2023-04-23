@@ -6,7 +6,13 @@
 // Array of questions for user input
 const questions = [];
 //inquirer prompt
-inquirer.prompt([
+inquirer
+.prompt([
+    {
+        type: 'input',
+        name: 'Title',
+        message: 'What is the title of your project?',
+    },
     {
         type: 'input',
         name: 'Description',
@@ -56,7 +62,7 @@ inquirer.prompt([
 
 //function to write README file
 function writeReadme(Title, Description, TableOfContents, Installation, Usage, Credits, License) {
-    const readme = `# ${Title}
+    let readme = `# ${Title}
     ## Description
     ${Description}
     ## Table of Contents
@@ -69,7 +75,7 @@ function writeReadme(Title, Description, TableOfContents, Installation, Usage, C
     ${Credits}
     ## License
     ${License}
-    `;
+`;
     writeToFile('README.md', readme);
 
 }
