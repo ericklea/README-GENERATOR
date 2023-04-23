@@ -2,6 +2,7 @@
  //run inquirer prompt
  const inquirer = require('inquirer');
  const fs = require('fs');
+const { default: Choices } = require('inquirer/lib/objects/choices');
 
 // Array of questions for user input
 const questions = [];
@@ -21,7 +22,8 @@ inquirer
     {
         type: 'checkbox',
         name: 'Table of Contents',
-        message: ['Installation', 'Usage', 'Credits', 'Liscense'],
+        message: 'Select the sections you would like to include in your README:',
+        choices: ['Installation', 'Usage', 'Credits', 'Liscense'],
     },
     {
         type: 'input',
@@ -52,17 +54,17 @@ inquirer
     {
         type: 'input',
         name: 'Questions',
-        message: 'What is your GitHub username?', 'What is your email address?',      
+        message: 'What is your GitHub username and email address?',      
     },
 
 ])
  //write then response and console.log it
  .then((response) => {
-    console.log(response);
-    const filename = `${response.Title.toLowerCase().split(' ').join('')}.json`;
-    fs.writeFile(filename, JSON.stringify(response, null, '\t'), (err) =>
-    err ? console.log(err) : console.log('Success!')
-    );
+    console.log('Your README file will now be generated');
+    //const filename = `${response.Title.toLowerCase().split(' ').join('')}.json`;
+    //fs.writeFile(filename, JSON.stringify(response, null, '\t'), (err) =>
+   // err ? console.log(err) : console.log('Success!')
+   // );
  });
 
 
