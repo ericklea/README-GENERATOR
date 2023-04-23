@@ -39,13 +39,12 @@ function init() {
         },
         {
             type: 'input',
-            name: 'Installation',
-            message: 'What are the steps required to install your project?',
+            name: 'Credits',
+            message: 'List collaborators, tutorials followed, and materials used:',           
+        },
+        {
+            type:
 
-            type: 'confirm',
-            name: 'confirm',
-            message: 'Are you sure?'
-        }
     ])
         .then(answers => {
             console.log('Answers:', answers);
