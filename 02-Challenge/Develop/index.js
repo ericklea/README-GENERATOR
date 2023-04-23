@@ -20,7 +20,7 @@ inquirer.prompt([
   {
     type: 'input',
     name: 'Description',
-    message: "Describe what your application does, the technologies you used, and the challanges you faced?",
+    message: 'Describe what your application does, the technologies you used, and the challanges you faced?',
   },
   {
     type: 'checkbox',
@@ -28,8 +28,20 @@ inquirer.prompt([
     message: ['Installation','Usage','Credits','Liscense'],
   },
   {
+    type: 'input',
+    name: 'Installation',
+    message: 'What are the steps required to install your project?',
+},
+{
+  type: '',
+  name: 'Table of Contents',
+  message: ['Installation','Usage','Credits','Liscense'],
+},
+{
+  type: 'input',
+  name: 'Installation',
+  message: 'What are the steps required to install your project?',
 
-    
     type: 'confirm',
     name: 'confirm',
     message: 'Are you sure?'
