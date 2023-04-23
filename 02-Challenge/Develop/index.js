@@ -15,12 +15,12 @@ function writeToFile(fileName, data) {}
 function init() {
     //run inquirer prompt
     const inquirer = require('inquirer');
-
+//inquirer prompt
 inquirer.prompt([
   {
     type: 'input',
-    name: 'name',
-    message: "What's your name?"
+    name: 'Description',
+    message: "Describe what your application does, the technologies you used, and the challanges you faced?"
   },
   {
     type: 'list',
