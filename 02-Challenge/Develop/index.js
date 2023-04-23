@@ -32,7 +32,14 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-//function init() {
+function init() {
+    inquirer.prompt(questions).then((answers) => {
+        console.log(answers);
+        writeReadme(answers.Title, answers.Description, answers.TableOfContents, answers.Installation, answers.Usage, answers.License);
+    });
+}
+
+
     //run inquirer prompt
     const inquirer = require('inquirer');
     const fs = require('fs');
