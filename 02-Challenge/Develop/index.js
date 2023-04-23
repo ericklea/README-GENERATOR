@@ -5,6 +5,10 @@ const questions = [];
 
 // TODO: Create a function to write README file
 const fs = require('fs');
+
+function writeReadme(Title, Description, TableOfContents, Installation, Usage, License){
+
+}
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
