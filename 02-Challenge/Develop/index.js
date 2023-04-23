@@ -1,15 +1,35 @@
 // TODO: Include packages needed for this application
 
 // TODO: Create an array of questions for user input
-////const questions = [];
+const questions = [];
 
 // TODO: Create a function to write README file
 
 
-//function writeReadme(Title, Description, TableOfContents, Installation, Usage, License) {
+function writeReadme(Title, Description, TableOfContents, Installation, Usage, License) {
+    const readme = `# ${Title}
+    ## Description
+    ${Description}
+    ## Table of Contents
+    ${TableOfContents}
+    ## Installation
+    ${Installation}
+    ## Usage
+    ${Usage}
+    ## License
+    ${License}
+    `;
+    writeToFile('README.md', readme);
 
-//}
-//function writeToFile(fileName, data) { }
+}
+function writeToFile(fileName, data) { 
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+            console.log(err);
+        }
+        console.log('Success!');
+    });
+}
 
 // TODO: Create a function to initialize app
 //function init() {
