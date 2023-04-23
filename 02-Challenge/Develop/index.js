@@ -34,15 +34,25 @@ inquirer
         message: 'Provide instruction and examples for use:',
     },
     {
-        type: 'input',
-        name: 'Credits',
-        message: 'List collaborators, tutorials followed, and materials used:',           
-    },
-    {
         type: 'list',
         name: 'License',
         message: 'Indicate the licenses you used:',
         choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+    },
+    {
+        type: 'input',
+        name: 'Contributing',
+        message: 'Who contributed to this project?',        
+    },
+    {
+        type: 'input',
+        name: 'Tests',
+        message: 'Provide examples on how to run tests for your application:',           
+    },
+    {
+        type: 'input',
+        name: 'Questions',
+        message: 'What is your GitHub username?', 'What is your email address?',      
     },
 
 ])
