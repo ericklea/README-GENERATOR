@@ -48,17 +48,20 @@ function init() {
             name: 'License',
             message: 'Indicate the licenses you used:',
             choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
-        }
+        },
 
     ])
-        .then(answers => {
-            console.log('Answers:', answers);
+    //write then response and console.log it
+            .then(answers => {
+
+
+            //console.log('Answers:', answers);
         })
         .catch(error => {
             console.log('Error:', error);
         });
 }
-//write then response and console.log it
+
 
 // Function call to initialize app
 init();
