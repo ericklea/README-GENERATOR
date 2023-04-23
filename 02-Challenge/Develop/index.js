@@ -55,7 +55,7 @@ inquirer.prompt([
 
 
 //function to write README file
-function writeReadme(Title, Description, TableOfContents, Installation, Usage, License) {
+function writeReadme(Title, Description, TableOfContents, Installation, Usage, Credits, License) {
     const readme = `# ${Title}
     ## Description
     ${Description}
@@ -65,6 +65,8 @@ function writeReadme(Title, Description, TableOfContents, Installation, Usage, L
     ${Installation}
     ## Usage
     ${Usage}
+    ## Credits
+    ${Credits}
     ## License
     ${License}
     `;

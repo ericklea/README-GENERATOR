@@ -34,15 +34,19 @@ This project is licensed under the ${license} license.`
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  return `# ${data.description}
-  return `# ${data.tableOfContents}
-  return `# ${data.installation}
-  return `# ${data.usage}
-  return `# ${data.license}
-  return `# ${data.contribution}
-  return `# ${data.tests}
-  return `# ${data.questions}
-  `;
+  ## Description
+  ${data.Description}
+  ## Table of Contents
+  ${data.TableOfContents}
+  ## Installation
+  ${data.Installation}
+  ## Usage
+  ${data.Usage}
+  ## Credits
+  ${data.Credits}
+  ## License
+  ${data.License}
+`;
 }
 
 module.exports = generateMarkdown;
