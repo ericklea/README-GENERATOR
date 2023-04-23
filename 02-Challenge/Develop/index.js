@@ -3,9 +3,7 @@
 // TODO: Create an array of questions for user input
 const questions = [];
 
-// TODO: Create a function to write README file
-
-
+//function to write README file
 function writeReadme(Title, Description, TableOfContents, Installation, Usage, License) {
     const readme = `# ${Title}
     ## Description
@@ -31,7 +29,7 @@ function writeToFile(fileName, data) {
     });
 }
 
-// TODO: Create a function to initialize app
+//function to initialize app
 function init() {
     inquirer.prompt(questions).then((answers) => {
         console.log(answers);
@@ -79,14 +77,13 @@ function init() {
 
     ])
     //write then response and console.log it
-        .then(answers => {
-            console.log('Title, ${answers.name}');
-            const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
-
-            fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-              err ? console.log(err) : console.log('Success!')
-            );
-          });
+    .then((response) => {
+        console.log(response);
+        const filename = `${response.Title.toLowerCase().split(' ').join('')}.json`;
+        fs.writeFile(filename, JSON.stringify(response, null, '\t'), (err) =>
+        err ? console.log(err) : console.log('Success!')
+        );
+     });
 
 
             //console.log('Answers:', answers);
