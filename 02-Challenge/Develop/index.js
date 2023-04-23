@@ -20,15 +20,16 @@ inquirer.prompt([
   {
     type: 'input',
     name: 'Description',
-    message: "Describe what your application does, the technologies you used, and the challanges you faced?"
+    message: "Describe what your application does, the technologies you used, and the challanges you faced?",
   },
   {
-    type: 'list',
-    name: 'color',
-    message: 'What is your favorite color?',
-    choices: ['Red', 'Blue', 'Green', 'Yellow']
+    type: 'checkbox',
+    name: 'Table of Contents',
+    message: ['Installation','Usage','Credits','Liscense'],
   },
   {
+
+    
     type: 'confirm',
     name: 'confirm',
     message: 'Are you sure?'
