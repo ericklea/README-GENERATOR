@@ -2,10 +2,10 @@
  //run inquirer prompt
  const inquirer = require('inquirer');
  const fs = require('fs');
-const { default: Choices } = require('inquirer/lib/objects/choices');
+ const {default: choices} = require('inquirer/lib/objects/choices');
 
 // Array of questions for user input
-const questions = [];
+const questions = [
 //inquirer prompt
 inquirer
 .prompt([
@@ -56,16 +56,40 @@ inquirer
         name: 'Questions',
         message: 'What is your GitHub username and email address?',      
     },
-
 ])
+];
+
+//function to write README file
+function writeToFile(fileName, data) { 
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+            console.log(err);
+        }
+        console.log('Success!');
+    });
+}
+
+//function to initialize app
+function init() {
+    inquirer.prompt(questions).then((answers) => {
+        console.log(answers);
+        writeReadme(answers.Title, answers.Description, answers.TableOfContents, answers.Installation, answers.Usage, answers.License);
+    });
+}
+
+// Function call to initialize app
+init()
+
+
+
  //write then response and console.log it
- .then((response) => {
-    console.log('Your README file will now be generated');
+ //.then((response) => {
+    //console.log('Your README file will now be generated');
     //const filename = `${response.Title.toLowerCase().split(' ').join('')}.json`;
     //fs.writeFile(filename, JSON.stringify(response, null, '\t'), (err) =>
    // err ? console.log(err) : console.log('Success!')
    // );
- });
+ //});
 
 
     console.log('Answers:', answers);
@@ -91,13 +115,7 @@ function writeReadme(Title, Description, TableOfContents, Installation, Usage, C
     writeToFile('README.md', readme);
 
 }
-function writeToFile(fileName, data) { 
-    fs.writeFile(fileName, data, (err) => {
-        if (err) {
-            console.log(err);
-        }
-        console.log('Success!');
-    });
+
 }
 
 //function to initialize app
