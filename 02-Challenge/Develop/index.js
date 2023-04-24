@@ -1,8 +1,3 @@
-//packages needed for this application
- //run inquirer prompt
- const inquirer = require('inquirer');
- const fs = require('fs');
- const {default: choices} = require('inquirer/lib/objects/choices');
 
 // Array of questions for user input
 const questions = [
@@ -80,6 +75,11 @@ function init() {
 // Function call to initialize app
 init()
 
+//packages needed for this application
+    //run inquirer prompt
+    const inquirer = require('inquirer');
+    const fs = require('fs');
+    const {default: choices} = require('inquirer/lib/objects/choices');
 
 
  //write then response and console.log it
