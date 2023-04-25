@@ -2,8 +2,8 @@
     //run inquirer prompt
     const inquirer = require('inquirer');
     const fs = require('fs');
-    const {default: choices} = require('inquirer/lib/objects/choices');
-
+    const path = require('path');
+    
 // Array of questions for user input
 const questions = [
 
