@@ -1,31 +1,32 @@
-# ReadMe
-  ![GitHub license](https://img.shields.io/badge/license-MIT License-blue.svg)
+# Readme
+  ![GitHub license](https://img.shields.io/badge/license-GNU AGPLv3-blue.svg)
   ## Description
-  creates a readme page
+  a
   ## Table of Contents
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Credits](#credits)
-  * [License](#license)
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [Credits](#Credits)
+  * [License](#License)
   ## Installation
-  download vs code
+  b
   ## Usage
-  create a readme page to use on a project
+  c
   ## Credits
-  me, ta, tutor
+  d
   ## Contributing
-  me ta tutor youtube google
+  e
   ## Tests
-  node index.js
+  f
   ## Questions
+  If you have any questions, please contact me at:
   [ericklea](github.com/ericklea)
   erickson.leah.j@gmail.com
 
   ## License
   
 
-This project is licensed under the MIT License license.
-  MIT License
+This project is licensed under the GNU AGPLv3 license.
+  GNU AGPLv3
   
 * [License](#license)
 

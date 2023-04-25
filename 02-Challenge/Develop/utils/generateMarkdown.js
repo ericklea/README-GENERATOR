@@ -31,17 +31,17 @@ This project is licensed under the ${license} license.`
   return "";
 }
 
-// TODO: Create a function to generate markdown for README
+//function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseBadge(data.License)}
   ## Description
   ${data.Description}
   ## Table of Contents
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Credits](#credits)
-  * [License](#license)
+  * [Installation](#Installation)
+  * [Usage](#Usage)
+  * [Credits](#Credits)
+  * [License](#License)
   ## Installation
   ${data.Installation}
   ## Usage
