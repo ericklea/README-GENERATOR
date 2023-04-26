@@ -8,7 +8,7 @@
   [Credits](#credits)
   [License](#license)
   ## Installation
-  To run this application, install VSCode, open an integrated terminal and run nmp i.
+  To run this application, install VSCode, open an integrated terminal and run nmp i. Additionally, install markdown extention.
   ## Usage
   To use this application, open VSCode, open an integrated terminal, run nmp i, input node index.js in the terminal, then answer the prompted questions. After all questions are answered, a readme file will populate. Open the read me file in markdown and then open that in a browser to view your readme. 
   ## Credits
